@@ -1,25 +1,69 @@
 aid: ouro
+
 name: Ouro
-description: 'Ouro is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by nea) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Ouro provides an autonomous paid‑growth platform for ecommerce brands, turning product pages into self‑improving Meta ad campaigns. The system creates, launches, learns from, and scales Meta ads within the budget and guardrails set by the user, offering continuous creative testing, performance‑based scaling, and budget reallocation to maximize ROAS.'
+
 url: https://raw.githubusercontent.com/api-evangelist/ouro/refs/heads/main/apis.yml
+
 x-type: company
+
+image: https://ouro.ai/og.png
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Advertising
+- E‑commerce
+- AI
+- Marketing
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- nea
+
 common:
+- type: Hosts
+  url: hosts/ouro-hosts.yml
+- type: Vendors
+  url: vendors/ouro-vendors.yml
+- type: TermsOfService
+  url: https://ouro.ai/terms
+- type: PrivacyPolicy
+  url: https://ouro.ai/privacy
+- type: DomainSecurity
+  url: security/ouro-domain-security.yml
 - type: Website
   url: https://ouro.ai
+
+apis: []
+
+x-backed-by:
+- nea
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The provider's website is a JavaScript‑rendered Next.js app with no machine‑readable OpenAPI spec discovered.
+  evidence:
+    - url: https://ouro.ai
+      status: 200
+  checked: '2026-10-22'
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
